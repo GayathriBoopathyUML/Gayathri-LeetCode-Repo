@@ -3,9 +3,10 @@ class Solution:
         dic={}
         for i in strs:
             k = ''.join(sorted(i))
-            if k in dic:
-                dic[k].append(i)
-            else:
-                dic[k] = [i]
+            # if k in dic:
+            #     dic[k].append(i)
+            # else:
+            #     dic[k] = [i]
+            dic[k] = dic.get(k, []) + [i]
         return list(dic.values())
                 
